@@ -49,7 +49,7 @@ A full-stack blog editing platform that allows users to **create**, **edit**, **
 
 ### 📁 Step 1: Clone the Repository
 ```bash
-
+" https://github.com/KhuneKushal/Blogwriter.git "
 
 Backend + Frontend Setup
 Clone the repository and navigate to the root directory.
