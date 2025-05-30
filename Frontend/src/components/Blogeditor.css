@@ -1,0 +1,199 @@
+/* Container */
+.blog-editor {
+  max-width: 900px;
+  margin: 3rem auto; /* increased top/bottom margin for spacing */
+  padding: 2rem 2.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937; /* dark gray for text */
+}
+
+/* Header */
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem; /* larger gap between header and main form */
+  border-bottom: 2px solid #e5e7eb; /* subtle bottom border for separation */
+  padding-bottom: 1rem;
+}
+
+
+
+/* Header center: Title */
+.app-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #2563eb;
+  user-select: none;
+  order: 2;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Header right side: Actions (welcome text) */
+.header-welcome {
+  order: 3;
+  font-size: 1rem;
+  color: #4b5563;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Editor actions group */
+.editor-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Status indicators */
+.auto-save-indicator,
+.unsaved-indicator {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Form Groups */
+.editor-form .form-group {
+  margin-bottom: 1.75rem;
+}
+
+/* Inputs and Textarea */
+.title-input,
+.tags-input,
+.content-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1.8px solid #d1d5db;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #374151;
+  background-color: #fafafa;
+}
+
+.title-input:focus,
+.tags-input:focus,
+.content-textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+  outline: none;
+  background-color: #fff;
+}
+
+/* Textarea specifics */
+.content-textarea {
+  min-height: 350px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* Footer */
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Status badges */
+.status-indicator {
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  user-select: none;
+  letter-spacing: 0.03em;
+}
+
+.status-indicator.published {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-indicator.draft {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* Buttons - general */
+button {
+  padding: 0.65rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  user-select: none;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.5);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.7);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background-color: #6b7280;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(107, 114, 128, 0.5);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #4b5563;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(75, 85, 99, 0.7);
+}
+
+/* Disabled buttons */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .editor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .app-title {
+    order: 0;
+    flex-grow: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+
+  .editor-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

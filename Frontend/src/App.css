@@ -1,0 +1,78 @@
+/* Overall header container */
+.app-header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Flex container for header contents */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Blog title (left aligned, stays centered if desired) */
+.app-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  cursor: pointer;
+  margin: 0;
+  flex: 1;
+}
+
+/* Header actions: Welcome and Logout */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto; /* pushes it to the rightmost side */
+}
+
+/* Welcome message */
+.welcome-text {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Logout button */
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .app-title {
+    text-align: left;
+    width: 100%;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.logout-btn{
+  margin-left: 0;
+}
